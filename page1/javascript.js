@@ -37,11 +37,12 @@ for (let i = 0; i < 6; i++) {
     console.log(json.meals[0]);
     document.getElementById(
       "show_products"
-    ).innerHTML += ` <div class="card" style="width: 18rem">
+    ).innerHTML += ` <div class="card p-3" style="width: 22rem">
                           <img src="${json.meals[0].strMealThumb}" class="w-100 card-img-top" alt="..." />
                           <div class="card-body">
                             <h5 class="card-title">${json.meals[0].strMeal}</h5>
-                            <a href="#" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#${json.meals[0].idMeal}">Detail</a>
+                            <p class="card-subtitle">"${json.meals[0].strArea}"</p>
+                            <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#${json.meals[0].idMeal}">Detail</a>
                           </div>
                         </div>`;
 
@@ -65,7 +66,7 @@ for (let i = 0; i < 6; i++) {
           <div class="modal-footer">
             
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
-            <button type="button" class="btn btn-primary">รายละเอียด</button>
+            <a type="button" class="btn btn-primary" href="../page3/index.html">รายละเอียด</a>
           </div>
         </div>
       </div>
@@ -75,4 +76,5 @@ for (let i = 0; i < 6; i++) {
     
     
   })();
+  
 }
