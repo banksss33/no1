@@ -13,4 +13,8 @@ function fetchJSON(url) {
       `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${searchParams.get('id')}`
     );
     console.log(json)
+    document.getElementById('pic').src = json.meals[0].strMealThumb;
+    document.getElementById('name').innerHTML = json.meals[0].strMeal;
+    document.getElementById('sub').innerHTML = json.meals[0].strArea;
+    document.getElementById('quantity').innerHTML = sessionStorage.getItem(json.meals[0].strMeal)
   })();
