@@ -13,27 +13,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="/page1/index.html">page1</a>
-            <a class="nav-link" href="/personal/index.html">page2</a>
-            <a class="nav-link" href="/page3/index.html">page3</a>
-            <a class="nav-link" href="/page4/index.html">page4</a>
-          </div>
-        </div>
-        <a class="navbar-brand" href="#">
-          <i class="bi bi-cart2"></i>
-        </a>                    
-      </div>
-    </nav>
-
     <div class="container p-3">
       <!-- <div class="card" style="width: 18rem">
         <img src="..." class="card-img-top" alt="..." />
@@ -53,6 +32,34 @@
       </div>
 
     </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Launch demo modal
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">รายละเอียด</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>ชื่อ: <span></span></p>
+            <p>ราคา: <span></span></p>
+            <p>คงเหลือ: <span></span></p>
+          </div>
+          <div class="modal-footer">
+            
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
+            <button type="button" class="btn btn-primary">รายละเอียด</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
   <script src="javascript.js"></script>
   <script

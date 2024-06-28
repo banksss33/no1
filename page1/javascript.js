@@ -44,6 +44,7 @@ for (let i = 0; i < 6; i++) {
                             <a href="#" class="btn btn-primary">Detail</a>
                           </div>
                         </div>`;
+                        
   })();
  
 }
