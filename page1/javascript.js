@@ -66,7 +66,7 @@ for (let i = 0; i < 6; i++) {
           <div class="modal-footer">
             
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
-            <a type="button" class="btn btn-primary" href="../page3/index.html">รายละเอียด</a>
+            <a type="button" class="btn btn-primary" href="../page3/index.html?id=${json.meals[0].idMeal}">รายละเอียด</a>
           </div>
         </div>
       </div>
