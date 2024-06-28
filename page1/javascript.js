@@ -78,5 +78,11 @@ for (let i = 0; i < 6; i++) {
     
     
   })();
-  
+ 
 }
+
+addEventListener("DOMContentLoaded", () => {
+  if (sessionStorage.clickcount) {
+    document.getElementById("lblCartCount").innerHTML = sessionStorage.clickcount;
+  }
+});

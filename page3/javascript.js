@@ -16,5 +16,19 @@ function fetchJSON(url) {
     document.getElementById('pic').src = json.meals[0].strMealThumb;
     document.getElementById('name').innerHTML = json.meals[0].strMeal;
     document.getElementById('sub').innerHTML = json.meals[0].strArea;
-    document.getElementById('quantity').innerHTML = sessionStorage.getItem(json.meals[0].strMeal)
+    document.getElementById('price').innerHTML = sessionStorage.getItem(json.meals[0].strMeal+'_price')
+    document.getElementById('quantity').innerHTML = sessionStorage.getItem(json.meals[0].strMeal+'_quantity')
   })();
+
+  function clickCounter() {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+    } else {
+      sessionStorage.clickcount = 1;
+      }
+    document.getElementById("lblCartCount").innerHTML = sessionStorage.clickcount;
+  }
+
+  if (sessionStorage.clickcount) {
+      document.getElementById("lblCartCount").innerHTML = sessionStorage.clickcount;
+  }
