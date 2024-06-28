@@ -45,6 +45,8 @@ for (let i = 0; i < 6; i++) {
                           </div>
                         </div>`;
 
+    sessionStorage.setItem(json.meals[0].strMeal, parseInt(Math.random() * (420 - 40) + 40));
+
     document.getElementById(
       "load_modal"
     ).innerHTML += ` 
@@ -58,8 +60,7 @@ for (let i = 0; i < 6; i++) {
           <div class="modal-body">
             <p>ชื่อ: <span>${json.meals[0].strMeal}</span></p>
             <p>ราคา: <span>${ parseInt(Math.random() * (420 - 40) + 40) + " บาท"}</span></p>
-            <p>คงเหลือ: <span>รอ sessionstorage</span></p>
-            <p>คงเหลือ: <span>รอ sessionstorage</span></p>
+            <p>คงเหลือ: <span>${ sessionStorage.getItem(json.meals[0].strMeal) + ' จาน'}</span></p>
           </div>
           <div class="modal-footer">
             
@@ -71,7 +72,7 @@ for (let i = 0; i < 6; i++) {
     </div>
     `;
 
-    sessionStorage.setItem(json.meals[0].strMeal, parseInt(Math.random() * (420 - 40) + 40))
+    
     
   })();
 }
