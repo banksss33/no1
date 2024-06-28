@@ -41,7 +41,7 @@ for (let i = 0; i < 6; i++) {
                           <img src="${json.meals[0].strMealThumb}" class="w-100 card-img-top" alt="..." />
                           <div class="card-body">
                             <h5 class="card-title">${json.meals[0].strMeal}</h5>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#${json.meals[0].idMeal}">Detail</a>
+                            <a href="#" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#${json.meals[0].idMeal}">Detail</a>
                           </div>
                         </div>`;
 
@@ -57,7 +57,8 @@ for (let i = 0; i < 6; i++) {
           </div>
           <div class="modal-body">
             <p>ชื่อ: <span>${json.meals[0].strMeal}</span></p>
-            <p>ราคา: <span>ไม่มีวะ ชิหัย</span></p>
+            <p>ราคา: <span>${ parseInt(Math.random() * (420 - 40) + 40) + " บาท"}</span></p>
+            <p>คงเหลือ: <span>รอ sessionstorage</span></p>
             <p>คงเหลือ: <span>รอ sessionstorage</span></p>
           </div>
           <div class="modal-footer">
@@ -69,5 +70,8 @@ for (let i = 0; i < 6; i++) {
       </div>
     </div>
     `;
+
+    sessionStorage.setItem(json.meals[0].strMeal, parseInt(Math.random() * (420 - 40) + 40))
+    
   })();
 }
