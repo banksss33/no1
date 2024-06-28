@@ -34,7 +34,6 @@ for (let i = 0; i < 6; i++) {
     var json = await fetchJSON(
       "https://www.themealdb.com/api/json/v1/1/random.php"
     );
-    console.log(json.meals[0]);
     document.getElementById(
       "show_products"
     ).innerHTML += ` <div class="card p-3" style="width: 22rem">
@@ -46,8 +45,11 @@ for (let i = 0; i < 6; i++) {
                           </div>
                         </div>`;
 
-    sessionStorage.setItem(json.meals[0].strMeal, parseInt(Math.random() * (420 - 40) + 40));
-
+    
+    let price = parseInt(Math.random() * (420 - 40) + 40);
+    let quantity = parseInt(Math.random() * (420 - 40) + 40);
+    sessionStorage.setItem(json.meals[0].strMeal + "_quantity", quantity);
+    sessionStorage.setItem(json.meals[0].strMeal + "_price", price);
     document.getElementById(
       "load_modal"
     ).innerHTML += ` 
@@ -60,8 +62,8 @@ for (let i = 0; i < 6; i++) {
           </div>
           <div class="modal-body">
             <p>ชื่อ: <span>${json.meals[0].strMeal}</span></p>
-            <p>ราคา: <span>${ parseInt(Math.random() * (420 - 40) + 40) + " บาท"}</span></p>
-            <p>คงเหลือ: <span>${ sessionStorage.getItem(json.meals[0].strMeal) + ' จาน'}</span></p>
+            <p>ราคา: <span>${ sessionStorage.getItem(json.meals[0].strMeal + "_price") + " บาท"}</span></p>
+            <p>คงเหลือ: <span>${ sessionStorage.getItem(json.meals[0].strMeal + "_quantity") + ' จาน'}</span></p>
           </div>
           <div class="modal-footer">
             
