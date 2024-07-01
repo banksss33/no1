@@ -1,28 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<style>
+  .nav-link {
+    color: #F9D689 !important;
+  }
+
+  .nav-link:hover {
+    color: #F5E7B2 !important;
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg position-absolute z-1 w-100 " >
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <a class="navbar-brand ms-5" href="#"><img style="height: 4.2rem" src="/kisspng-menu-logo-restaurant-cafeteria-clip-art-whats-on-the-menu-stem-pipeline-5c8026faeb33a0.1298692915519024589634-removebg-preview.png"/></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="/page1/index.html">page1</a>
-        <a class="nav-link" href="/personal/index.html">page2</a>
-        <a class="nav-link" href="/page3/index.html">page3</a>
-        <a class="nav-link" href="/page4/index.html">page4</a>
-      </div>
+    <div class="collapse navbar-collapse " id="navbarScroll">
+      <ul class="navbar-nav ms-auto me-3 my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item ">
+          <a class="nav-link" aria-current="page" href="#">About us</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
-    <a class="navbar-brand" href="#">
-      <i class="bi bi-cart2"></i>
-    </a>
   </div>
 </nav>
